@@ -30,7 +30,7 @@ export default class Email {
 
   subcription() {
     interval(5000).pipe(
-      take(3),
+      take(5),
       exhaustMap(() => ajax.getJSON(this.url)),
       map((response) => response.messages),
       catchError((error) => {
